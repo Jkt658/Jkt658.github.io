@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>##SITUS JUAL BELI AKUN/DIAMOND</title>
+<style>
+    body {
+                  background-color: purple;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    } 
+    body 
+		   /* Style untuk tampilan form */
+        }
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+    .navbar {
+        overflow: hidden;
+        background-color: #333;
+    }
+    .navbar a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+    }
+    .navbar a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+    .form-container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        margin: 20px auto;
+    }
+	
+		
+    input[type="text"],
+    input[type="password"],
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        box-sizing: border-box;
+    }
+    input[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+		{
+		margin: 0;
+		font-family: Arial,sans-serif;
+		}
+		.navbar{
+			overflow: hidden;
+			background-color:#333;
+		}
+		.navbar a {
+			float: left;
+			display: block;
+			color:#f2f2f2;
+			text-align: center;
+			padding: 14px 20px;
+			text decoration: none;
+		}
+		.navbar a:hover {
+			background-color:#add;
+			color: black;
+		}
+		
+        background-color: #purple;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 800px;
+        margin-bottom: 12px 20px; 
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    }
+
+    .product {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 10px;
+        margin: 10px 0;
+        background-color: #f9f9f9;
+    }
+	hr {
+            width: 100%;
+            border: 1px solid #000; /* Atur gaya garis sesuai kebutuhan */
+        }
+		
+    form {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    label {
+        width: 100%;
+        background-color: #007bff;
+        padding: 10px;
+        color: white;
+        display: block;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        border-radius: 8px;
+    }
+	.bold {
+	 font-size: 35px; /* Atur ukuran huruf menjadi 20 piksel */
+        font-weight: bold; /* Atur teks menjadi tebal */
+    }
+
+    h1, p {
+        text-align: center;
+        color: #333;
+    }
+
+    button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    button:hover {
+        background-color: green;
+    }
+	
+	footer {
+	 background-color: yellow;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 1250px;
+		height:700
+		font-size: 35px
+		
+	}
+	
+	
+
+</style>
+</head>
+<body>
+
+    <div class="container">
+        <h1></h1>
+		
+		<div class="navbar">
+		<a href="product.html">L.M.STORE</a>
+		<a href="services.html">services</a>
+		<a href="about.html">about</a>
+		<a href="contact.html">contact</a>
+		<input type="search" id="search" name="q" placeholder="Kata Kunci...">
+            <button type="submit">Cari</button>
+			
+		<a href="file:///C:/program%20saya/program%20situs.javascrift.html" onclick="openLoginForm()">Login</a>
+    <a href="#" onclick="openRegisterForm()">Register</a>
+		   
+        
+		</div>
+    <!-- Form untuk login -->
+    <form id="loginForm" class="form-container" style="display:none;" action="login.php" method="post">
+        <h2>Login</h2>
+        <input type="text" placeholder="Username" name="username" required>
+        <input type="password" placeholder="Password" name="password" required>
+        <input type="submit" name="login" value="Login">
+        <div class="switch-form">
+            <span>Don't have an account? </span><a href="#" onclick="openRegisterForm()">Register here</a>
+        </div>
+    </form>
+
+    <!-- Form untuk register -->
+    <div id="registerForm" class="form-container" style="display:none;">
+        <form action="register.php" method="post">
+            <h2>Register</h2>
+            <input type="text" placeholder="Username" name="username" required>
+            <input type="password" placeholder="Password (min. 6 characters)" name="password" pattern=".{6,}" title="Password must be at least 6 characters long" required>
+            <input type="password" placeholder="Masukkan ulang Password" name="confirm_password" pattern=".{6,}" title="Password must be at least 6 characters long" required>
+            <input type="email" placeholder="Email" name="email" required>
+            <input type="submit" name="register" value="Register">
+            <div class="switch-form">
+                <span>Already have an account? </span><a href="#" onclick="openLoginForm()">Login here</a>
+            </div>
+    </div>
+	</div>
+		<hr>
+		<p class="bold">SEDANG POPULER .</p>
+		<div>
+		<img src="index.html/pibg.JPEG" width="125" height"100">
+		<img src="index/ff.JPEG" width="125" height"185">
+		<img src="index/ml13.PNG" width="125" height"100">
+		<img src="index/pes1.PNG" width="125" height"100">
+		<img src="index/xbox2.PNG" width="125" height"100">
+		<img src="index/ball poll.PNG" width="124" height"100">
+		<img src="index/aov.JPEG" width="124" height"100">
+		<img src="index/paket.PNG" width="122" height"100">
+		<img src="index/pAKET.JPG" width="122" height"100">
+		<img src="index/yt.JPEG" width="122" height"100">
+		
+		</div>
+		<h1>selamat berbelanja,jangan lupa kembali lagi </h1>
+		
+		<hr>
+		<div>
+		<h2 class="bold">TOPUP VIDEO GAME</h2 >
+		<a href="file:///C:/program%20saya/payment%20_pubg.html.html">
+		<img src="index/pibg.JPEG" width="300" height"250">
+		</a>
+		<a href="file:///C:/program%20saya/pembayaran_diamond_ff.html..html">
+		<img src="index/ff.JPEG" height"690" width="300" >
+		</a>
+		<a href="file:///C:/program%20saya/pembayaran_diamond_ml.html..html">
+		<img src="ml13.PNG" width="300" height"300">
+		<a href="file:///C:/program%20saya/cloud_payment.html.html">
+		<img src="pes1.PNG" width="300" height"300">
+		<a href="file:///C:/program%20saya/halaman%20untuk%20maintaince.html">
+		<img src="ball poll.PNG" width="300" height"300">
+		<a href="file:///C:/program%20saya/halaman%20untuk%20maintaince.html">
+		<img src="coc.PNG" width="300" height"300">
+		<a href="file:///C:/program%20saya/halaman%20untuk%20maintaince.html">
+		<img src="brawl.PNG" width="300" height"300">
+		<a href="file:///C:/program%20saya/program%20situs.javascrift.html#">
+		<img src="xbox2.PNG" width="300" height"300">
+		<a href="ffile:///C:/program%20saya/halaman%20untuk%20maintaince.html">
+		<img src="cr.JPEG" width="300" height"300">
+		<a href="file:///C:/program%20saya/halaman%20untuk%20maintaince.html">
+		<img src="aov.JPEG" width="300" height"300">
+		<a href="file:///C:/program%20saya/halaman%202%20payament.html">
+		<img src="ea.JPG" width="300" height"300">
+		<a href="file:///C:/program%20saya/halaman%20untuk%20maintaince.html">
+		<img src="ea.JPG" width="300" height"300">
+		</a>
+		<hr>
+		<h3 class="bold">TAGIHAN/BERLANGGANAN</h3>
+		<a href="file:///C:/program%20saya/payment%20token.html">
+		<img src="6.JPEG" width="306" height"250">
+		</a>
+		<a href="file:///C:/program%20saya/pembayaran_pulsa.html..html">
+		<img src="paket.PNG" height"698" width="300" >
+		<a href="file:///C:/program%20saya/halaman%20untuk%20maintaince.html">
+		<img src="pAKET.jpg" width="308" height"300">
+		<a href="file:///C:/program%20saya/pembayaran%20dana.html">
+		<img src="dana.PNG" width="308" height"303">
+		<a href="file:///C:/program%20saya/halaman%20untuk%20maintaince.html">
+		<img src="iqi.PNG" width="308" height"300">
+		<a href="file:///C:/program%20saya/halaman%20untuk%20maintaince.html">
+		<img src="wetv.JPEG" width="306" height"300">
+		<a href="file:///C:/program%20saya/halaman%20untuk%20maintaince.html">
+		<img src="bstation.JPEG" width="306" height"300">
+		<a href="file:///C:/program%20saya/halaman%20untuk%20maintaince.html">
+		<img src="nimo.PNG" width="306" height"300">
+		<a href="file:///C:/program%20saya/halaman%20untuk%20maintaince.html">
+		<img src="yt.JPEG" width="306" height"300">
+		<a href="file:///C:/program%20saya/halaman%20untuk%20maintaince.html">
+		<img src="spoty.JPEG" width="306" height"300">
+		<a href="file:///C:/program%20saya/halaman%20untuk%20maintaince.html">
+		<img src="vidio.PNG" width="306" height"300">
+		<a href="file:///C:/program%20saya/halaman%20untuk%20maintaince.html">
+		<img src=" DISNEY.PNG" width="304" height"300">
+		</a>
+		</div
+            
+          
+
+    </div>
+
+	
+		<footer>
+            <p>Informasi Tambahan</p>
+            <p>Silakan hubungi cs Lm-store kami untuk informasi lebih lanjut.</p>
+            <p>Telepon: 857-6501-7417</p>
+            <p>Email: lmstore141@gmail.com</p>
+			<p>2024 Daftar Harga dan Informasi Tambahan</p>
+        </footer>
+
+    <script>
+		// Tampilkan form login
+    function openLoginForm() {
+        document.getElementById("loginForm").style.display = "block";
+        document.getElementById("registerForm").style.display = "none";
+    }
+
+    // Tampilkan form register
+    function openRegisterForm() {
+        document.getElementById("registerForm").style.display = "block";
+        document.getElementById("loginForm").style.display = "none";
+    }
+	// Fungsi JavaScript untuk menampilkan form yang diinginkan
+        function openRegisterForm() {
+            document.getElementById("loginForm").style.display = "none";
+            document.getElementById("registerForm").style.display = "block";
+        }
+
+        function openLoginForm() {
+            document.getElementById("registerForm").style.display = "none";
+            document.getElementById("loginForm").style.display = "block";
+        }
+
+    // Event listener untuk login form
+    document.getElementById("loginForm").addEventListener("submit", function(event){
+        event.preventDefault(); // Prevent default form submission
+        // Handle login logic here
+        alert("Login button clicked!");
+    });
+
+    // Event listener untuk register form
+    document.getElementById("registerForm").addEventListener("submit", function(event){
+        event.preventDefault(); // Prevent default form submission
+        // Handle register logic here
+        alert("Register button clicked!");
+    });
+	
+	 // Validasi form login
+    function validateLoginForm() {
+        var password = document.forms["loginForm"]["password"].value;
+        if (password.length < 6) {
+            alert("Password must be at least 6 characters long.");
+            return false;
+        }
+        // Handle login logic here
+        alert("Login button clicked!");
+    }
+
+    // Validasi form register
+    function validateRegisterForm() {
+        var password = document.forms["registerForm"]["password"].value;
+        if (password.length < 6) {
+            alert("Password must be at least 6 characters long.");
+            return false;
+        }
+        // Handle register logic here
+        alert("Register button clicked!");
+    }
+
+        function tambahkanKeKeranjang(product, price) {
+            cartItems.push({ product, price });
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartList = document.getElementById('cart-items');
+            const totalElement = document.getElementById('total');
+
+            cartList.innerHTML = '';
+            total = 0;
+
+            cartItems.forEach(item => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${item.product} - Rp${item.price}`;
+                cartList.appendChild(listItem);
+
+                total += item.price;
+            });
+
+            totalElement.textContent = `Total: Rp${total}`;
+
+            const checkoutContainer = document.getElementById('checkout-container');
+            checkoutContainer.style.display = cartItems.length > 0 ? 'block' : 'none';
+        }
+
+        function showCheckout() {
+            document.getElementById('checkout-container').style.display = 'block';
+        }
+
+        function gotoPayment() {
+            document.getElementById('checkout-container').style.display = 'none';
+            document.getElementById('payment-container').style.display = 'block';
+        }
+
+        function completeCheckout() {
+            alert('Checkout selesai! Terima kasih atas pembelian Anda.');
+            cartItems = [];
+            updateCart();
+            document.getElementById('payment-container').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Halaman Pembayaran Diamond</title>
+<style>
+    body {
+        background-color: purple;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+	   
+	   .main {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .payment-methods {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .payment-method {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 20px;
+        margin: 0 10px;
+        width: 200px;
+    }
+
+    .payment-method img {
+        width: 100px; /* Adjust the size as needed */
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 10px; /* Add some space between image and text */
+    }
+    h1, h2, p {
+        text-align: center;
+        color: #333;
+    }
+
+    .diamond-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .diamond {
+        margin: 10px;
+        text-align: center;
+        transition: transform 0.3s;
+    }
+
+    .diamond img {
+        width: 125px;
+        height: 100px;
+        border-radius: 8px;
+    }
+
+    .diamond p {
+        margin-top: 10px;
+    }
+
+    button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.2s;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
+    }
+
+    #buyerId {
+        width: calc(100% - 40px);
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        box-sizing: border-box;
+    }
+
+</style>
+</head>
+<body>
+<header>
+    <h1>Halaman Pembayaran Diamond</h1>
+</header>
+
+<main>
+    <div class="container">
+        <h2>Informasi Pembeli</h2>
+        <input type="text" id="buyerId" placeholder="Masukkan no hp ">
+    </div>
+
+    <section class="container diamond-container">
+        <div class="diamond">
+		<img src="pulsa1.JPG" alt="token">
+            <p>RP6.500</p>
+            <button onclick="proceedPayment('token', 6500)">Bayar</button>
+        </div>
+		
+		<div class="diamond">
+		<img src="pulsa1.JPG" alt="token">
+            <p>RP11.500</p>
+            <button onclick="proceedPayment('token', 11500)">Bayar</button>
+        </div>
+		
+		<div class="diamond">
+		<img src="pulsa1.JPG" alt="token">
+            <p>RP15.000</p>
+            <button onclick="proceedPayment('token', 15000)">Bayar</button>
+        </div>
+		
+		<div class="diamond">
+            <img src="pulsa1.JPG" alt="token">
+            <p>RP22.000</p>
+            <button onclick="proceedPayment('token', 22000)">Bayar</button>
+        </div>
+
+        <div class="diamond">
+            <img src="pulsa1.JPG" alt="token">
+            <p>RP52.000</p>
+            <button onclick="proceedPayment('token', 52000)">Bayar</button>
+        </div>
+
+        <div class="diamond">
+           <img src="pulsa1.JPG" alt="token">
+            <p>RP102.000</p>
+            <button onclick="proceedPayment('token', 102000)">Bayar</button>
+        </div>
+		
+		<div class="diamond">
+           <img src="pulsa1.JPG" alt="token">
+            <p>RP200.000</p>
+            <button onclick="proceedPayment('token', 200000)">Bayar</button>
+        </div>
+
+      
+		</main>
+
+</div>
+        </div>
+    </section>
+</main>
+
+<div id="paymentInfo" class="container"></div>
+
+<script>
+	function processPayment(method) {
+        alert('Harap membayar dengan ' + method + ' 081373021137');
+		 alert('Harap menunggu 1x24jam untuk pengiriman' );
+        // Tambahkan kode untuk menangani pembayaran di sini
+    }
+    function proceedPayment(tokenName, price) {
+        var buyerId = document.getElementById('buyerId').value;
+        var paymentInfo = document.getElementById('paymentInfo');
+        paymentInfo.innerHTML = `
+            <h2>Ringkasan Pembayaran</h2>
+            <p>Anda akan membayar untuk ${'pulsa'} seharga Rp${price}</p>
+            <p>ID Pembeli: ${buyerId}</p>
+			<div class="container">
+            <p>Harap transfer jumlah tersebut ke metode rekening yang tersedia.</p>
+			<div class="container">
+			<div class="payment-methods">
+		<div class="payment-method">
+            <img src="dana.PNG" width="300px" height"300px">
+            <h3> EWALLET</h3>
+             <button onclick="processPayment('Dana')">Bayar Sekarang</button>
+			</div>
+			
+			<div class="payment-method">
+            <img src="ovo.JPEG" width="300px" height"300px">
+            <h3> EWALLET</h3>
+             <button onclick="processPayment('Dana')">Bayar Sekarang</button>
+			</div>
+			<div class="payment-method">
+            <img src="ovo.JPEG" width="300px" height"300px">
+            <h3> EWALLET</h3>
+             <button onclick="processPayment('Dana')">Bayar Sekarang</button>
+			</div>
+		</div>
+	</div>
+			
+		
+			
+
+		
+			
+        `;
+    }
+</script>
+
+</body>
+</html>
